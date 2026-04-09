@@ -1,0 +1,7 @@
+str=input("Enter String")
+words=str.split()
+long=words[0]
+for w in words:
+    if len(w)>len(long):
+        long=w
+print(long)
