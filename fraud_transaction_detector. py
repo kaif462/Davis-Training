@@ -1,0 +1,52 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNempqtT3shNy9C97F7sBZs",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kaif462/Davis-Training/blob/main/fraud_transaction_detector.%20py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "transactions = [\n",
+        "    (\"user1\", 5000), (\"user1\", 12000), (\"user2\", 20000)\n",
+        "]\n",
+        "\n",
+        "threshold = 10000\n",
+        "fraud = {}\n",
+        "\n",
+        "for user, amt in transactions:\n",
+        "    if amt > threshold:\n",
+        "        fraud[user] = amt\n",
+        "\n",
+        "print(fraud)"
+      ],
+      "metadata": {
+        "id": "sszK-2iFQ71w"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
