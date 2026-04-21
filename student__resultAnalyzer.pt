@@ -1,0 +1,57 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPS9Xat/Ml1ExpIRUm6l1Dl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kaif462/Davis-Training/blob/main/student__resultAnalyzer.pt\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9CISthBrNDK1"
+      },
+      "outputs": [],
+      "source": [
+        "try:\n",
+        "    with open(\"students.txt\") as f:\n",
+        "        for line in f:\n",
+        "            try:\n",
+        "                id, name, m1, m2, m3 = line.strip().split(\",\")\n",
+        "                total = int(m1)+int(m2)+int(m3)\n",
+        "                percent = total/3\n",
+        "\n",
+        "                if percent >= 90: grade = \"A\"\n",
+        "                elif percent >= 75: grade = \"B\"\n",
+        "                else: grade = \"C\"\n",
+        "\n",
+        "                print(name, total, percent, grade)\n",
+        "            except:\n",
+        "                print(\"Invalid data:\", line)\n",
+        "except FileNotFoundError:\n",
+        "    print(\"File not found\")"
+      ]
+    }
+  ]
+}
